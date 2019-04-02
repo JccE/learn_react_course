@@ -1,31 +1,14 @@
 import React, { Component } from 'react';
+import Component1 from './functional/component1';
 
 class App extends Component {
 
-// have a state. set it with an initial value, in this case
-// counter with initial of 0
-  state = {
-    counter: 0
-  }
-
-// increment is
-  increment = () => (
-    this.setState({counter: 5})
-    )
-
   render() {
+
     return (
       <div className="App">
-      <button onClick={() => this.increment()}>Button</button>
-        <div>
-          Div 1 {this.state.counter}
-        </div>
-        <div>
-          Div 2
-        </div>
-        <div>
-          Div 3
-        </div>
+        React
+        <Component1 />
       </div>
     );
   }
