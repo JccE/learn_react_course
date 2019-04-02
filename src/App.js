@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import * as styles from './styles'
 
 
 // explains a few ways of putting styles into react
-
-
-
 class App extends Component {
 
-
   render() {
-    const name = "Jimmy"
+
+
     return (
       <div className="App">
-         <button>Button 1</button><br/>
-         React <br/><br/>
-         {name}
+        <div style={styles.styles}>Style</div>
+         <button>Button 1</button>
+         <br/>
+         React
+         <br/>
+         <br/>
       </div>
     );
   }
