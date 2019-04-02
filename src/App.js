@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Component1 from './functional/component1';
+import Container1 from './containers/container1';
 
 class App extends Component {
 
@@ -8,7 +9,8 @@ class App extends Component {
     return (
       <div className="App">
         React
-        <Component1 />
+        <Container1 nickname="Jim" />
+        <Component1 name='jimmy' age={24}/>
       </div>
     );
   }
