@@ -3,17 +3,23 @@ import Component1 from './functional/component1';
 import Container1 from './containers/container1';
 
 class App extends Component {
-
   render() {
-
-    return (
-      <div className="App">
-        React
-        <Container1 nickname="Jim" />
-        <Component1 name='jimmy' age={24}/>
-      </div>
-    );
+    if(false) {
+      return (
+        <div className="App">
+          React
+          Condition 1
+        </div>
+    )}
+    else {
+      return (
+        <div className="App">
+          React
+          Condition 2
+        </div>
+    )}
   }
+}
 
 
 
@@ -60,12 +66,12 @@ class App extends Component {
   //     </div>
   //   );
   // }
-}
+// }
 
 
-const Appinstance = new App()
+// const Appinstance = new App()
 
-console.log(Appinstance)
+// console.log(Appinstance)
 
 
 
