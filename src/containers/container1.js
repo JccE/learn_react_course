@@ -7,21 +7,37 @@ class Container1 extends Component {
 
     // user defined.
     this.state = {
-      stateprop1: "Inital state, bitches"
+      stateprop1: "Inital state, bitches",
+      stateprop2: 5
     }
   }
 
 // correct
   changeState = () => (
-    this.setState({ stateprop1: "New State, Hoes"})
-    )
+    this.setState( {stateprop2: this.state.stateprop2 + 1,
+      stateprop1: this.state.stateprop1 + "L" }
+    ))
+
+  changeState2 = () => (
+    this.setState( {stateprop1: this.state.stateprop1 + "L"}
+    ))
+
+
+// // same as
+//   changeState = () => (
+//     this.setState((prevState, props) => ({
+//       stateprop2: prevState.stateprop2 + 1})
+//     ))
 
   render() {
     return (
         <div>
+
+      {/*React merges state */}
           <button onClick={() => this.changeState()}> Change State </button>
-        {/*dont call set state inline*/}
-{/*          <button onClick={() => this.setState({ stateprop1: "Another State, Sluts"})}> Change State </button>*/}
+          <button onClick={() => this.changeState2()}> Change State 2</button>
+          {this.state.stateprop2}
+          <br/>
           {this.props.nickname}
           <br/>
           {this.state.stateprop1}
