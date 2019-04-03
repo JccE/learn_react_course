@@ -2,24 +2,39 @@ import React, { Component } from 'react';
 import Component1 from './functional/component1';
 import Container1 from './containers/container1';
 
+
+
 class App extends Component {
+
   render() {
-    if(false) {
-      return (
-        <div className="App">
-          React
-          Condition 1
-        </div>
-    )}
-    else {
-      return (
-        <div className="App">
-          React
-          Condition 2
-        </div>
-    )}
+    return (
+      <div>
+        React
+      {/*nested ternary expression*/}
+        {false
+          ? false ? <div>Condition 1 </div> : <div> Condition 2 </div>
+          : true ? <div>Condition 3 </div> : <div> Condition 4 </div>
+        }
+      </div>
+      )
   }
 }
+    // if(false) {
+    //   return (
+    //     <div className="App">
+    //       React
+    //       Condition 1
+    //     </div>
+    // )}
+    // else {
+    //   return (
+    //     <div className="App">
+    //       React
+    //       Condition 2
+    //     </div>
+    // )}
+//   }
+// }
 
 
 
